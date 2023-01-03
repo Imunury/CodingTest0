@@ -36,7 +36,7 @@ class Solution42 {
 //정수 n 이 주어지면 높이와 너비가 n 인 직각 이등변 삼각형을 출력하도록 코드를 작성해보세요.
 
 
-public class Solution43 {
+class Solution43 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -70,27 +70,27 @@ class Solution44 {
 //정수 n과 정수 배열 numlist가 매개변수로 주어질 때,
 //numlist에서 n의 배수가 아닌 수들을
 //제거한 배열을 return하도록 solution 함수를 완성해주세요.
-class Solution {
-    public int[] solution(int n, int[] numlist) {
-        int[] answer = new int[10];
-        for (int i = 0; i < numlist.length; i++) {
-            if (numlist[i] % n == 0) {
-                for (int j = 0; j < i; j++) {
-                    answer[j] = numlist[i];
-                }
-            }
-        }
-        return answer;
-    }
-}
+//class Solution {
+//    public int[] solution(int n, int[] numlist) {
+//        int[] answer = new int[10];
+//        for (int i = 0; i < numlist.length; i++) {
+//            if (numlist[i] % n == 0) {
+//                for (int j = 0; j < i; j++) {
+//                    answer[j] = numlist[i];
+//                }
+//            }
+//        }
+//        return answer;
+//    }
+//}
 
 //문자열 my_string이 매개변수로 주어질 때,
 //my_string 안에 있는 숫자만 골라 오름차순 정렬한 리스트를 return 하도록 solution 함수를 작성해보세요.
-class Solution {
-    public int[] solution(String my_string) {
-        int[] answer = {};
-        answer = my_string.split("");
-        Arrays.sort(answer);
-        return answer;
-    }
-}
+//class Solution {
+//    public int[] solution(String my_string) {
+//        int[] answer = {};
+//        answer = my_string.split("");
+//        Arrays.sort(answer);
+//        return answer;
+//    }
+//}

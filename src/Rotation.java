@@ -115,6 +115,20 @@ class Solution104{
     }
 }
 
-// if(equ==0){
-//                    answer++;
-//                }
+//문자열 before와 after가 매개변수로 주어질 때, before의 순서를 바꾸어 after를 만들 수 있으면 1을,
+//만들 수 없으면 0을 return 하도록 solution 함수를 완성해보세요.
+class Solution {
+    public int solution(String before, String after) {
+        int answer = 0;
+        String[] arr1 = before.split("");
+        String[] arr2 = after.split("");
+        String[] arr3 = new String[before.length()];
+        for(int i = 0; i<before.length();i++){
+            for(int j = 0; j<i;j++){
+                if(arr1[i].equals(arr2[j])){
+                }
+            }
+        }
+        return answer;
+    }
+}
