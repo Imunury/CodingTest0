@@ -84,7 +84,7 @@ class Solution103 {
 //s에서 분리한 문자열을 빼고 남은 부분에 대해서 이 과정을 반복합니다. 남은 부분이 없다면 종료합니다.
 //만약 두 횟수가 다른 상태에서 더 이상 읽을 글자가 없다면, 역시 지금까지 읽은 문자열을 분리하고, 종료합니다.
 //문자열 s가 매개변수로 주어질 때, 위 과정과 같이 문자열들로 분해하고, 분해한 문자열의 개수를 return 하는 함수 solution을 완성하세요.
-class Solution104{
+class Solution104 {
     public int solution(String s) {
         int answer = 0;
         int equ = 0;
@@ -107,7 +107,7 @@ class Solution104{
                 dif = 0;
                 a = 0;
             }
-            if (s.length() == i+1 && a > 0) {
+            if (s.length() == i + 1 && a > 0) {
                 answer++;
             }
         }
@@ -117,27 +117,27 @@ class Solution104{
 
 //문자열 before와 after가 매개변수로 주어질 때, before의 순서를 바꾸어 after를 만들 수 있으면 1을,
 //만들 수 없으면 0을 return 하도록 solution 함수를 완성해보세요.
-class Solution {
-    public int solution(String before, String after) {
-        int answer = 0;
-        String[] arr1 = before.split("");
-        String[] arr2 = after.split("");
-        String[] arr3 = new String[before.length()];
-        for(int i = 0; i<before.length();i++){
-            for(int j = 0; j<after.length();j++){
-                if(arr1[i].equals(arr2[j])){
-                    arr3[j]=arr1[i];
-                }
-            }
-        }
-        if(arr2.equals(arr3)){
-            answer=1;
-        }else{
-            answer=0;
-        }
-        return answer;
-    }
-}
+//class Solution {
+//    public int solution(String before, String after) {
+//        int answer = 0;
+//        String[] arr1 = before.split("");
+//        String[] arr2 = after.split("");
+//        String[] arr3 = new String[before.length()];
+//        for (int i = 0; i < arr1.length; i++) {
+//            for (int j = 0; j < arr2.length; j++) {
+//                if (arr1[i]==arr2[j]) {
+//                    arr3[j] = arr1[i];
+//                }
+//            }
+//        }
+//        if (arr2==arr3) {
+//            answer = 1;
+//        } else {
+//            answer = 0;
+//        }
+//        return answer;
+//    }
+//}
 
 //머쓱이는 큰 종이를 1 x 1 크기로 자르려고 합니다.
 //예를 들어 2 x 2 크기의 종이를 1 x 1 크기로 자르려면 최소 가위질 세 번이 필요합니다.
@@ -145,7 +145,27 @@ class Solution {
 class Solution106 {
     public int solution(int M, int N) {
         int answer = 0;
-        answer = (M-1)+(M*(N-1));
+        answer = (M - 1) + (M * (N - 1));
+        return answer;
+    }
+}
+
+//새로 생긴 놀이기구는 인기가 매우 많아 줄이 끊이질 않습니다.
+//이 놀이기구의 원래 이용료는 price원 인데,
+//놀이기구를 N 번 째 이용한다면 원래 이용료의 N배를 받기로 하였습니다.
+//즉, 처음 이용료가 100이었다면 2번째에는 200, 3번째에는 300으로 요금이 인상됩니다.
+//놀이기구를 count번 타게 되면 현재 자신이 가지고 있는 금액에서
+//얼마가 모자라는지를 return 하도록 solution 함수를 완성하세요.
+//단, 금액이 부족하지 않으면 0을 return 하세요.
+class Solution107 {
+    public long solution(int price, int money, int count) {
+        long answer = -1;
+        long sum = 0;
+        for(int i=1; i<=count;i++){
+            sum += price*i;
+        }
+        long a = sum-money;
+        answer = a >= 0 ? a : 0;
         return answer;
     }
 }
